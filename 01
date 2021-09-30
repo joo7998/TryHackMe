@@ -1,0 +1,100 @@
+<BeginnerPath_Intro>
+
+(https://tryhackme.com/room/beginnerpathintro)
+
+01.WebAppSecurity (Password_Reset_Code)
+  bruteForcing: trying different combinations until correct
+
+02.NetworkSecurity (Target_AC_Hack)
+
+03.PreSecurity -> Offensive Pen*testing (Penetration_Testing = ethnically hack system)
+              -> Cyber Defense (investigate attacks, defend system)
+
+
+<Network_Fundamentals>
+
+def_networking: connected
+def_internet: 1906s ARPANET ->1989 WWW
+              network1 (router/trasmitting_device) --Internet -- network2(router)
+              1)private_network
+              2)public_network
+
+Identify_devices on a network:
+  1)name: IP(Internet Protocol) Address
+          -unique to yourself
+          -protocol (to communicate in the same language)
+              a)IPv4 : 4 octets
+              b)IPv6 : more recent, due to shortage, longer than IPv4
+          1.1)public_address: to Identify_devices on the internet
+                          by internet service provider(ISP)
+                          HOME
+                          (86.157.52.21)
+          1.2)private_address: to Identify a device among other devices
+                          (192.168.1.77)
+                          each laptop
+  2)fingerprints: MAC(Media Access Control) Address
+                  serial_num, globally uninuqe <--> spoofing
+                  12 character hexa_decimal
+                  (a4:c3:f0:85:ac:2d)
+                  MAC Address control: hotel & ecafe "Guest"/"Public" wifi pay per device
+
+Ping(ICMP):
+  Ping(network tool) uses ICMP(Internet Control Message Protocol) packets
+                      to determine if the connection btw devices exists/reliable
+
+
+<Intro_LAN(Local Area Network)>
+
+LAN Topology: network design
+  1)Star Topology : centralised router -> many devices, common, easy, $
+  2)Bus T : backbone cable(single cable), slow, difficult to troubleshoot/identity, one fail->all down, cost_efficient(+)
+  3)Ring(Token) T: not common, mash network
+
+Switch: device within network to aggregate multiple devices
+        port for devices to plug into
+        efficient
+        packet switching
+
+Router: connect networks & pass data btw
+        computer 1 -> router 1 -> router 2 -> computer 2
+
+Sub_netting: spliting network into smaller, 4 bytes(32 bits), 0-255
+  1)network address(192.168.1.0): Identify the start of the network
+  2)host address(192.168.1.100): Identify a device on the subnet
+  3)default gateway : assigned to a device on the network-capable of sending information to another network )
+                    (192.168.1.1 or 192.168.1.254)
+
+ARP(Address Resolution Protocol) protocol:
+  -identify themselves on a network
+  -associate its MAC address(physical identifier)
+              with an IP address(logical identifier) on the network
+  -find the MAC address of a device for communication
+  -HOW) cache(store identifiers of other devices on the network)
+       APR Request -> every other devices on a network "match MAC => IP ? " -> No
+       -> APR Reply (back to initial device) -> remembered & stored in cache
+
+DHCP(Dynamic Host Configuration Protocol) Protocol:
+  -device connects to a network
+    =>DHCP Discover -> DHCP Offer -> DHCP Request -> DHCP ACK
+      (give me IP)     (here)        (will do)       (u may use for _time)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Complete_Beginner_Introduction
+Basic Linux - Get familiar with the linux command line.
+Web Application Security - Learn web application security concepts through the OWASP Top 10
+Network Security - Using essential tools like NMAP to enumerate infrastructure.
+Scripting Challenges - Using Python and Bash to carry out different tasks.
+Privilege Escalation
